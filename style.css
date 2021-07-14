@@ -31,6 +31,11 @@ img{
     border:5px solid #E02C6D;
 }
 
+.container{
+    width: 65%;
+    margin: 0 auto;
+}
+
 /*-----------------------------------------------------------------------
                 Football Banner Part Style 
 -------------------------------------------------------------------------*/
@@ -44,7 +49,7 @@ img{
     padding-top: 80px;
     padding-bottom: 60px;
     display: flex;
-    justify-content:space-between;
+    /* justify-content:space-between; */
     align-items: center;
 }
 .banner-info h1{
@@ -52,6 +57,9 @@ img{
     font-weight: 700;
     color: #ffffff;
 }
+/* .banner-img{
+    flex-grow: 4;
+} */
 .banner-img img{
     width: 100%;
     height: 430px;
@@ -64,9 +72,7 @@ img{
 /*------------------------------------------------------------------------
                             Player Part Style 
 --------------------------------------------------------------------------*/
-.player-container{
-    width:65%;
-    margin: 0 auto;
+.players{
     margin-top: 70px;
     display: grid;
     grid-template-columns: repeat(3,1fr);
@@ -99,8 +105,6 @@ img{
                  Highlights Part Style 
 ----------------------------------------------------------------*/
 .highlights{
-    width:65%;
-    margin: 0 auto;
     display: grid;
     grid-template-columns:470px auto;
     grid-column-gap: 65px;
@@ -136,8 +140,6 @@ img{
     margin-top: 50px;
 }
 .gallerys{
-    width: 65%;
-    margin: 0 auto;
     margin-top: 50px;
     margin-bottom: 50px;
     display: grid;
@@ -182,7 +184,7 @@ img{
 /*-------------------------------------------------------------
                 Match schedule Part Style 
 ---------------------------------------------------------------*/
-.schedule{
+.schedule-bg{
     width: 100%;
     background-image: url(images/upcoming/upcomming-banner.jpg);
     background-repeat: no-repeat;
@@ -194,9 +196,7 @@ img{
     font-size: 45px;
     text-align: center;
 }
-.schedule-conatiner{
-    width:65%;
-    margin: 0 auto;
+.schedule{
     display: flex;
     justify-content: space-between;
 }
@@ -206,6 +206,7 @@ img{
 }
 .date-time h1{
     color: #E02C6D;
+
 }
 
 
@@ -223,7 +224,7 @@ img{
 }
 
 .footer-social-icon a{
-    padding: 10px;
+    padding:15px;
     border-radius:100%;
     background-color:#0b0d1717;
     margin-right:15px;
@@ -242,4 +243,77 @@ img{
     font-size: 18px;
     color: #000000;
     text-align: center;
+}
+
+
+/* --------------------------------------------------------
+                    Media Query 
+-----------------------------------------------------------*/
+/*------------ Mobile device--------------------- */
+@media screen and (max-width:500px) {
+
+    /* common style */
+    .container{
+        width: 90%;
+    }
+    .players, .highlights, gallerys{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    /* football Banner style */
+   .football-banner{
+       width: 100%;
+   }
+   .banner-container{
+       display: flex;
+       flex-wrap: wrap;
+   }
+   .banner-info{
+       margin-bottom: 50px;
+   }
+   .banner-info h1{
+       font-size: 36px;
+   }
+   .button-link{
+       margin-bottom:50px;
+   }
+   .banner-img img{
+       width: 80%;
+   }
+
+   /* highlight style */
+   .highlight-info{
+       margin-bottom: 50px;
+   }
+   .highlight-info h1{
+       font-size: 30px;
+   }
+
+   /* Match schedule Style  */
+   .schedule-bg{
+       width: 100%;
+   }
+   .schedule-title{
+       font-size:30px;
+   }
+   .club-item img{
+       width: 100%;
+   }
+   .club-item h2{
+       font-size: 20px;
+   }
+   .date-time h2{
+       font-size:20px;
+       margin-top: 0;
+   }
+
+    /* footer style */
+   .footer-container{
+       width: 100%;
+   }
+   .footer-logo img{
+       width:90%;
+   }
+
 }
