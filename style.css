@@ -1,11 +1,11 @@
-/*------------------------------------
-            Google Fonts 
--------------------------------------*/
+/*-----------------------------------------------------------------
+                                Google Fonts 
+-------------------------------------------------------------------*/
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 
-/*------------------------------------
-            Common Style 
--------------------------------------*/
+/*--------------------------------------------------------------
+                        Common Style 
+--------------------------------------------------------------*/
 body{
     font-family: 'Poppins', sans-serif;
     margin: 0;
@@ -23,11 +23,17 @@ img{
     color: #ffffff;
     padding: 10px 24px 10px 24px;
     background-color:#E02C6D;
+    transition:all ease-in-out 2s;
+}
+.button-link:hover{
+    background-color:#fff;
+    color:#E02C6D;
+    border:5px solid #E02C6D;
 }
 
-/*------------------------------------
-     Football Banner Part Style 
--------------------------------------*/
+/*-----------------------------------------------------------------------
+                Football Banner Part Style 
+-------------------------------------------------------------------------*/
 .football-banner{
     width: 100%;
     background-color:#2D25A0;
@@ -48,14 +54,18 @@ img{
 }
 .banner-img img{
     width: 100%;
-    height: 458px;
+    height: 430px;
+    transition: transform 2s ease-in-out;
+}
+.football-banner:hover .banner-img img{
+    transform: rotate(10deg);
 }
 
-/*------------------------------------
-     Player Part Style 
--------------------------------------*/
+/*------------------------------------------------------------------------
+                            Player Part Style 
+--------------------------------------------------------------------------*/
 .player-container{
-    width:80%;
+    width:65%;
     margin: 0 auto;
     margin-top: 70px;
     display: grid;
@@ -85,14 +95,14 @@ img{
     margin-top: 5px;
     font-weight: normal;
 }
-/*------------------------------------
-     Highlights Part Style 
--------------------------------------*/
+/*----------------------------------------------------------------
+                 Highlights Part Style 
+----------------------------------------------------------------*/
 .highlights{
-    width:80%;
+    width:65%;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 470px auto;
+    grid-template-columns:470px auto;
     grid-column-gap: 65px;
     margin-top:100px;
     align-items: center;
@@ -112,33 +122,124 @@ img{
     color:#6C6C6C;
     ;
 }
-
-/*------------------------------------
-     Highlights Part Style 
--------------------------------------*/
-.footer-container{
-    width: 45%;
-    margin: 0 auto;
+.hifhlight-image img{
+    width: 100%;
+    height: 380px;
 }
-footer-container p{
-    font-size: 18px;
-    counter-reset:#000000;
+
+/*------------------------------------------------------------
+                    Gallery Part Style 
+--------------------------------------------------------------*/
+.gallery-title{
+    font-size: 40px;
     text-align: center;
+    margin-top: 50px;
+}
+.gallerys{
+    width: 65%;
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap:30px;
+}
+.gallery-item{
+    position: relative;
+    height:225px;
+    overflow: hidden;
+}
+.gallery-photo{
+    transition: transform 2s ease-in-out;
+}
+
+.gallery-photo img{  
+    width: 100%;
+}
+.photo-details{
+    position: absolute;
+    line-height: 225px;
+    text-align: center;
+    display: none;
+    width: 0;
+    height: 0;
+    top: 0;
+}
+.photo-details h3 {
+    color: #ffffff;
+    margin: 0;
+}
+.gallery-item:hover .photo-details{
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+    opacity: 0.5;
+}
+.gallery-item:hover .gallery-photo{
+    transform: scale(1.2);
+}
+/*-------------------------------------------------------------
+                Match schedule Part Style 
+---------------------------------------------------------------*/
+.schedule{
+    width: 100%;
+    background-image: url(images/upcoming/upcomming-banner.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding:50px 0;
+}
+.schedule-title{
+    color:#ffffff;
+    font-size: 45px;
+    text-align: center;
+}
+.schedule-conatiner{
+    width:65%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+.date-time, .club-item{
+    color: #ffffff;
+    text-align: center;
+}
+.date-time h1{
+    color: #E02C6D;
+}
+
+
+/*-------------------------------------------------------
+                Footer Part Style 
+---------------------------------------------------------*/
+.footer-container{
+    width:483px;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 50px;
 }
 .footer-logo{
-    text-align: right;
+    margin-bottom:30px;
 }
-.footer-logo img{
-    width: 500px;
-    height: 68px;
-}
-.footer-social-icon{
-    text-align: center;
-}
+
 .footer-social-icon a{
-    padding: 12px;
+    padding: 10px;
     border-radius:100%;
-    background-color:#0b0d1727;
-    color: #969BAB;
+    background-color:#0b0d1717;
     margin-right:15px;
+    margin-bottom:30px;
+    color: #969BAB;
+    transition: all linear 1s;
+   
+}
+.footer-social-icon a:hover{
+    background-color:#E02C6D;
+    color: #fff;
+}
+.footer-container p{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-size: 18px;
+    color: #000000;
+    text-align: center;
 }
