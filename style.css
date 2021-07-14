@@ -256,7 +256,7 @@ img{
     .container{
         width: 90%;
     }
-    .players, .highlights, gallerys{
+    .players, .highlights, .gallerys{
         display: flex;
         flex-wrap: wrap;
     }
