@@ -23,7 +23,7 @@ img{
     color: #ffffff;
     padding: 10px 24px 10px 24px;
     background-color:#E02C6D;
-    transition:all ease-in-out 2s;
+    transition:all ease-in-out 1s;
 }
 .button-link:hover{
     background-color:#fff;
@@ -44,22 +44,25 @@ img{
     background-color:#2D25A0;
 }
 .banner-container{
-    width:85%;
+    width:75%;
     margin: 0 auto;
     padding-top: 80px;
     padding-bottom: 60px;
     display: flex;
-    /* justify-content:space-between; */
     align-items: center;
+}
+.banner-info{
+    flex-grow:4;
 }
 .banner-info h1{
     font-size: 64px;
     font-weight: 700;
     color: #ffffff;
 }
-/* .banner-img{
-    flex-grow: 4;
-} */
+.banner-img{
+    width: 100%;
+    flex-grow:8;
+}
 .banner-img img{
     width: 100%;
     height: 430px;
@@ -249,8 +252,8 @@ img{
 /* --------------------------------------------------------
                     Media Query 
 -----------------------------------------------------------*/
-/*------------ Mobile device--------------------- */
-@media screen and (max-width:500px) {
+/*---------Mobile device------*/
+@media screen and (max-width:680px) {
 
     /* common style */
     .container{
@@ -315,5 +318,50 @@ img{
    .footer-logo img{
        width:90%;
    }
+
+}
+
+/*---------Tablet Device------*/
+@media screen and (min-width:681px) and (max-width:992px) {
+    /* common style */
+    .container{
+        width: 90%;
+    }
+    .players, .highlights, .gallerys{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+    /* Banner style */
+   .football-banner{
+        width: 100%;
+    }
+    .banner-container{
+        display: flex;
+    }
+    .banner-info{
+        flex-grow: 3;
+    }
+    .banner-img{
+        flex-grow:3;
+        width: 100%;
+    }
+    .banner-info h1{
+        font-size:40px;
+    }
+    /* highlights style */
+    .highlight-info h1{
+        font-size: 30px;
+    }
+    .highlight-info p{
+        margin-bottom: 40px;
+    }
+    /* Match schedule Style  */
+   .schedule-bg{
+    width: 100%;
+    }
+    /* footer style */
+   .footer-container{
+    width:80%;
+    }
 
 }
